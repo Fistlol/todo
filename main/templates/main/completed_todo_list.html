@@ -1,0 +1,13 @@
+{% extends "main/wrapper.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container__table-title">Completed tasks in list "{{ todo_list.title }}"</div>
+    {% with todos=todos %}
+        {% include "main/table.html"%}
+    {% endwith %}
+    <div class="row">
+        <a href="{% url 'toDoList' todo_list.id %}" class="open-another-list">View incompleted tasks</a>
+        <button class="delete-list">Delete this list</button>
+    </div>
+{% endblock %}

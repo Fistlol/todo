@@ -1,0 +1,15 @@
+{% extends "main/wrapper.html" %}
+{% load static %}
+
+{% block content %}
+    <div>
+        {% for list in lists %}
+            <li>
+                <a href="1">{{ list.title }}</a>
+            </li>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+<!-- <a href="{% url 'main:todo_list' list.pk %}">{{ list.title }}</a> -->

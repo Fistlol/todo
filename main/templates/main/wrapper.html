@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}" type="text/css"></head>
+<body>
+    <div class="container">
+        <div class="container__header">
+            <a href="/todos">
+                <h2 class="container__header__h2">ToDo List</h2>
+            </a>
+            <button class="container__header__button">Add task</button>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
